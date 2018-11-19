@@ -1,0 +1,104 @@
+.img-responsive{
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.cubo,
+.cubo .cara {
+    width: 200px;
+    height: 200px;
+}
+
+.cubo .cara#superior {
+    /*background-color: rgba(255, 165, 0, 0.83);*/
+     background-image: url(img/cara-A.png);
+}
+
+.cubo .cara#frente {
+    /*background-color: rgba(255, 0, 0, 0.79);*/
+     background-image: url(img/cara-D.png);
+}
+
+.cubo .cara#derecha {
+    /*background-color: rgba(133, 234, 92, 0.83);*/
+      background-image: url(img/cara-C.png);
+}
+
+.cubo .cara#izquierda {
+    /*background-color: rgba(168, 92, 234, 0.83);*/
+      background-image: url(img/cara-D.png);
+}
+
+.cubo .cara#atras {
+    /*background-color: rgba(234, 92, 147, 0.83);*/
+      background-image: url(img/cara-B.png);
+}
+
+
+.cubo .cara#inferior {
+    /*background-color: rgba(92, 179, 234, 0.83);*/
+      background-image: url(img/cara-A.png);
+}
+
+/*Psición absoluta para poder manejarlos individualmente*/
+
+.cubo .cara {
+    position: absolute;
+    border: 1px dotted black;
+}
+
+/* Lo centramos respecto a su contenedor  */
+
+.cubo {
+    margin: 100px auto;
+}
+
+.cubo {
+    transform-style: preserve-3d;
+    /*Guardame el mismo espacio 3D para todos*/
+    transform: perspective(700px)
+        /*Le damos punto de fuga SOLO al cubo*/
+        rotateX(-30deg) rotateY(-30deg);
+    /*Rotamos las caras del cubo, ya que si no sólo veríamos la cara de enfrente*/
+    
+    /*Llamada a la animación keyframe -> nombre animacion ,duración, Nº repeticiones, direccion de la animacion*/
+    animation: giro 10s infinite linear;
+    
+}
+
+.cubo .cara#superior {
+    transform: rotateX(90deg) translateZ(100px);
+}
+
+.cubo .cara#derecha {
+    transform: rotateY(90deg) translateZ(100px);
+}
+
+.cubo .cara#izquierda {
+    transform: rotateY(90deg) translateZ(-100px);
+}
+
+
+.cubo .cara#inferior {
+    transform: rotateX(90deg) translateZ(-100px);
+    /*Z en negativo porque queremos que baje  */
+}
+
+.cubo .cara#frente {
+    transform: translateZ(100px);
+}
+
+.cubo .cara#atras {
+    transform: translateZ(-100px);
+}
+
+
+@keyframes giro {
+    0%{
+        transform:rotateX(0deg) rotateY(0deg);
+    }
+    
+    100%{
+        transform:rotateX(360deg) rotateY(360deg);
+    }
+}
