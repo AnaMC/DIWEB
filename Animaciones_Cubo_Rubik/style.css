@@ -63,7 +63,6 @@
     
     /*Llamada a la animación keyframe -> nombre animacion ,duración, Nº repeticiones, direccion de la animacion*/
     animation: giro 10s infinite linear;
-    
 }
 
 .cubo .cara#superior {

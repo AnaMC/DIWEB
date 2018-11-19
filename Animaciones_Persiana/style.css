@@ -1,0 +1,34 @@
+.wrapper{
+    margin: 0 auto;
+    width: 200px;
+    height: 950px;
+}
+
+.ventana{
+    background-color: lightseagreen;
+    height: 100%;
+    width: 100%;
+}
+
+.persiana{
+    width: 100%;
+    height: 100px;
+    background-color: lightcoral;
+    
+    animation-name: abrir;
+    animation-direction: ;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+    animation-direction: alternate;
+    animation-duration: 10s;
+}
+
+@keyframes abrir{
+     0%{
+       transform:  translateY(0%);
+    }
+    
+    100%{
+       transform:  translateY(700%);
+    }
+}
