@@ -1,0 +1,25 @@
+p{
+    justify-content: center;
+}
+section {
+    width: 100%;
+    height: 600px;
+    background-color: lightseagreen;
+}
+
+.circulo {
+    height: 600px;
+    width: 600px;
+    float: right;
+    /* Obligatorio para el uso de shapes*/
+    shape-outside: circle(50% at 50% 50%);
+
+}
+
+.polygon{
+    height: 600px;
+    width: 600px;
+     float: left;
+    /* Obligatorio para el uso de shapes*/
+    shape-outside: polygon(0 0 , 0 100%, 100% 100% , 80% 76%);
+}

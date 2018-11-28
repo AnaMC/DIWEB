@@ -1,0 +1,50 @@
+.wrapper {
+    margin: 0 auto;
+    width: 1000px;
+    height: 100vh;
+}
+
+.ventana {
+    background-color: lightseagreen;
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.pelota {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: lightcoral;
+
+    animation: desplazar 5s infinite cubic-bezier(0.46, 0.03, 0.52, 0.96);
+    animation-direction: linear;
+}
+
+@keyframes desplazar {
+    0% {
+        top: 0;
+        right: 0;
+    }
+
+    25% {
+        top: 0;
+        right: calc(100% - 50px);
+    }
+
+    50% {
+        top:  calc(100% - 50px);
+        right:  calc(100% - 50px);
+    }
+
+    75% {
+        top:  calc(100% - 50px);
+        right:  0;
+    }
+
+    100% {
+        top: 0;
+        right: 0;
+    }
+}
