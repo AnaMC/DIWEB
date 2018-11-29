@@ -1,0 +1,77 @@
+body {}
+
+.container {
+    height: 100%;
+    width: 100%;
+    background-image: url(lago.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.row {
+    height: calc(100vh/3);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 8vh;
+    font-weight: bold;
+    font-family: arial, helvetica;
+}
+
+.animacionD {
+    animation-timing-function: linear;
+    animation: derecha 2s;
+}
+
+.animacionI {
+    animation-timing-function: linear;
+    animation: izquierda 2s;
+}
+
+.row2 {
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    animation: opacidad 2s;
+}
+
+.texto-fondo {
+    background-image: url(flag.png);
+    background-clip: text;
+    color: transparent;
+    background-size: cover;
+    background-position: top center;
+    -webkit-background-clip: text;
+}
+
+@keyframes derecha {
+    0% {
+        margin-left: -2000px;
+    }
+
+    100% {
+        margin-left: 0;
+    }
+}
+
+@keyframes izquierda {
+    0% {
+        margin-right: -2000px;
+    }
+
+    100% {
+        margin-right: 0;
+    }
+}
+
+@keyframes opacidad {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+       opacity: 1;
+    }
+}
